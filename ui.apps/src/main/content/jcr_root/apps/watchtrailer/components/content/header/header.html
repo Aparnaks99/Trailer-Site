@@ -1,0 +1,28 @@
+<div data-sly-use.headerObj="${'com.watchtrailer.core.models.HeaderModel'}" id="header"><!-- div for header -->
+	<h1 id="logo"><a href="${properties.homepagepath}.html">WatchTrailer</a></h1>
+    <div id="navigation">
+	<tr>
+	<td colspan= "1" height="50" align="right">
+			<a href="${properties.loginpath}.html"><img src="/content/dam/watchtrailer/logintop.png"></a>
+			</td>
+			<td colspan= "1" height="50" align="left">
+				<a href="${properties.registration}.html"><img src="/content/dam/watchtrailer/regestration.png"></a>
+			</td>
+	</tr>
+	<ul data-sly-list.headerItem="${headerObj.getPrimarylinks}"><!-- unordered list-->
+		<li><a href="${headerItem.linkpath}.html">${headerItem.linktitle}</a></li>
+      </ul>
+    </div>
+    <div id="sub-navigation"><!-- start of div -->
+      <ul><!-- unordered list-->
+        <li><a href="#">ALL LATEST TRAILERS</a></li>
+      </ul>
+      <div id="search"><!-- div search-->
+        <form action="${properties.homepagepath}.html" method="get" accept-charset="utf-8">
+          <label for="search-field">SEARCH</label>
+          <input type="text" name="search_field" placeholder="Enter search here" id="search-field" class="blink search-field"  />
+          <input type="submit" value="GO!" class="search-button" />
+        </form>
+      </div>
+    </div>
+  </div>

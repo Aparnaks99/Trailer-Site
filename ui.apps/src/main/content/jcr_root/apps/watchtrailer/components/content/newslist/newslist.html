@@ -1,0 +1,16 @@
+<div id="news1">
+      <div class="head">
+	  <br><br>
+        <h3>NEWS</h3>
+
+      </div>
+      <sly data-sly-use.newsObj="${'com.watchtrailer.core.models.NewsListModel'}">
+      <sly data-sly-list="${newsObj.getNewsList}">
+      <div class="content">
+        <p class="date">${'dd.MM.yy'@format=item.getNewsDate}</p>
+        <h4>${item.getNewsTitle}</h4>
+        <p>${item.getNewsDesc}</p>
+        <a href="${item.getPagepath}.html">Read more</a> </div>
+		</sly>
+        </sly>
+    </div>

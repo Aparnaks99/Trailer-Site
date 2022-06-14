@@ -1,0 +1,15 @@
+    <div id="news">
+      <div class="head">
+        <a href="${properties.newsParentPath}.html"><strong> NEWS! </strong></a><!-- link to news-->
+        
+      </div>
+      <sly data-sly-use.newsObj="${'com.watchtrailer.core.models.NewsListModel'}">
+      <sly data-sly-list="${newsObj.getNewsList}">
+      <div class="content">
+        <p class="date">${'dd.MM.yy'@format=item.getNewsDate}</p>
+        <h4>${item.getNewsTitle}</h4>
+        <p class="text-concat">${item.getNewsDesc}</p>
+        <a href="${item.getPagepath}.html">Read more</a> </div>
+        </sly>
+        </sly>
+    </div>
